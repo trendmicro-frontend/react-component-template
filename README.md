@@ -12,21 +12,6 @@
 - Tests and Coverage
 - Travis CI (.travis.yml)
 
-## Installation
-
-```
-npm install --save-dev @trendmicro/react-component-template
-```
-
-## Usage
-
-Use this as a starting point for your projects's `.eslintrc`:
-```
-{
-    "extends": "./node_modules/@trendmicro/react-component-template/.eslintrc"
-}
-```
-
 ## License
 
 MIT
