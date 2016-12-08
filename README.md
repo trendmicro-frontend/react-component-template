@@ -12,6 +12,19 @@
 - Tests and Coverage
 - Travis CI (.travis.yml)
 
+## Usage
+
+1. Clone the repository with a different name:
+  ```sh
+  git clone git@github.com:trendmicro-frontend/react-component-template.git react-example
+  ```
+
+2. Remove .git from the newly directory and rename all the occurrences of "react-component-template" into your project name:
+  ```sh
+  cd react-example; rm -rf ./.git
+  sed -i '' 's/react-component-template/react-example/g' *.* examples/*
+  ```
+
 ## License
 
 MIT
