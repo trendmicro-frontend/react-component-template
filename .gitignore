@@ -1,7 +1,5 @@
 node_modules
+npm-debug.log
 /.nyc_output
 /coverage
-/dist
-/npm-debug.log
-/output
-/releases
+/lib
