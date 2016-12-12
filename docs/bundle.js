@@ -20366,8 +20366,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js?-autoprefixer&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js?-autoprefixer&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl");
+			module.hot.accept("!!./../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]!./../node_modules/stylus-loader/index.js!./../node_modules/stylint-loader/index.js!./index.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20389,7 +20389,8 @@
 	
 	// exports
 	exports.locals = {
-		"component-title": "_1erEd"
+		"component-title": "_1erEd",
+		"componentTitle": "_1erEd"
 	};
 
 /***/ },
