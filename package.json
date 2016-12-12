@@ -24,11 +24,11 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-component-template.git"
   },
-  "author": "Trend Micro <nobody@trend.com.tw>",
+  "author": "Author Name <author_name@trend.com.tw>",
   "contributors": [
     {
-      "name": "Trend Micro",
-      "email": "nobody@trend.com.tw",
+      "name": "Author Name",
+      "email": "author_name@trend.com.tw",
       "url": "https://github.com/trendmicro-frontend"
     }
   ],

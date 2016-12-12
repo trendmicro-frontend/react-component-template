@@ -1,0 +1,19 @@
+{
+  "name": "@trendmicro/react-component-template",
+  "version": "0.1.0",
+  "description": "Trend Micro Components: React Component Template",
+  "authors": [
+    {
+      "name": "Author Name",
+      "email": "author_name@trend.com.tw",
+      "homepage": "https://github.com/trendmicro-frontend"
+    }
+  ],
+  "homepage": "https://github.com/trendmicro-frontend/react-component-template",
+  "snapshots": [],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT"
+}

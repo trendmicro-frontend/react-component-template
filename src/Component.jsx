@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './index.styl';
 
 export default class extends Component {
     static propTypes = {
@@ -13,7 +14,7 @@ export default class extends Component {
 
     render() {
         return (
-            <div>Hello</div>
+            <div className={styles.componentTitle}>Hello</div>
         );
     }
 }
