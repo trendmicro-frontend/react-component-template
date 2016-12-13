@@ -33,8 +33,8 @@
 3. Remove .git from the newly directory and rename all the occurrences of "react-component" into your project name:
   ```sh
   rm -rf ./.git
-  sed -i '' 's/react-component/react-example/g' *.* {docs,examples}/*
-  sed -i '' 's/React Component/React Example/g' *.* {docs,examples}/*
+  sed -i '' 's/react-component/react-example/g' *.* examples/*
+  sed -i '' 's/React Component/React Example/g' *.* examples/*
   ```
 
 ## License
