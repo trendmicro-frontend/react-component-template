@@ -1,4 +1,4 @@
-# react-component-template [![build status](https://travis-ci.org/trendmicro-frontend/react-component-template.svg?branch=master)](https://travis-ci.org/trendmicro-frontend/react-component-template) [![Coverage Status](https://coveralls.io/repos/github/trendmicro-frontend/react-component-template/badge.svg?branch=master)](https://coveralls.io/github/trendmicro-frontend/react-component-template?branch=master)
+# react-component-template
 
 ## Contents
 
