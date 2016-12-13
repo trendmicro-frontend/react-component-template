@@ -15,12 +15,26 @@
 1. Clone the repository with a different name:
   ```sh
   git clone git@github.com:trendmicro-frontend/react-component-template.git react-example
+  cd react-example
   ```
 
-2. Remove .git from the newly directory and rename all the occurrences of "react-component-template" into your project name:
+2. Choose a branch you'd like to use:
+ 
+ * <b>babel</b> - ES2016
+   ```sh
+   git checkout babel
+   ```
+ 
+ * <b>webpack</b> - ES2016 + CSS Modules
+   ```sh
+   git checkout webpack
+   ```
+
+3. Remove .git from the newly directory and rename all the occurrences of "react-component" into your project name:
   ```sh
-  cd react-example; rm -rf ./.git
-  sed -i '' 's/react-component-template/react-example/g' *.* examples/*
+  rm -rf ./.git
+  sed -i '' 's/react-component/react-example/g' *.* {docs,examples}/*
+  sed -i '' 's/React Component/React Example/g' *.* {docs,examples}/*
   ```
 
 ## License
