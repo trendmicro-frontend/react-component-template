@@ -1,7 +1,7 @@
 {
-  "name": "@trendmicro/react-component-template",
+  "name": "@trendmicro/react-component",
   "version": "0.1.0",
-  "description": "Trend Micro Components: React Component Template",
+  "description": "Trend Micro Components: React Component",
   "main": "lib/index.js",
   "files": [
     "dist",
@@ -13,7 +13,7 @@
     "build": "webpack && npm run cleancss",
     "build-examples": "cd examples; webpack; cp -af index.html ../docs/index.html",
     "clean": "rm -f {lib,dist}/*",
-    "cleancss": "cleancss -o dist/react-component-template.min.css dist/react-component-template.css",
+    "cleancss": "cleancss -o dist/react-component.min.css dist/react-component.css",
     "demo": "http-server -p 8000 docs/",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trendmicro-frontend/react-component-template.git"
+    "url": "git+https://github.com/trendmicro-frontend/react-component.git"
   },
   "author": "Author Name <author_name@trend.com.tw>",
   "contributors": [
@@ -35,9 +35,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trendmicro-frontend/react-component-template/issues"
+    "url": "https://github.com/trendmicro-frontend/react-component/issues"
   },
-  "homepage": "https://github.com/trendmicro-frontend/react-component-template",
+  "homepage": "https://github.com/trendmicro-frontend/react-component",
   "keywords": [
     "react",
     "react-component"

@@ -1,7 +1,7 @@
 {
-  "name": "@trendmicro/react-component-template",
+  "name": "@trendmicro/react-component",
   "version": "0.1.0",
-  "description": "Trend Micro Components: React Component Template",
+  "description": "Trend Micro Components: React Component",
   "authors": [
     {
       "name": "Author Name",
@@ -9,7 +9,7 @@
       "homepage": "https://github.com/trendmicro-frontend"
     }
   ],
-  "homepage": "https://github.com/trendmicro-frontend/react-component-template",
+  "homepage": "https://github.com/trendmicro-frontend/react-component",
   "snapshots": [],
   "keywords": [
     "react",

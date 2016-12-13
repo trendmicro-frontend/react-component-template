@@ -1,27 +1,67 @@
-# react-component-template [![build status](https://travis-ci.org/trendmicro-frontend/react-component-template.svg?branch=master)](https://travis-ci.org/trendmicro-frontend/react-component-template) [![Coverage Status](https://coveralls.io/repos/github/trendmicro-frontend/react-component-template/badge.svg?branch=master)](https://coveralls.io/github/trendmicro-frontend/react-component-template?branch=master)
+# react-component [![build status](https://travis-ci.org/trendmicro-frontend/react-component.svg?branch=master)](https://travis-ci.org/trendmicro-frontend/react-component) [![Coverage Status](https://coveralls.io/repos/github/trendmicro-frontend/react-component/badge.svg?branch=master)](https://coveralls.io/github/trendmicro-frontend/react-component?branch=master)
 
-## Contents
+[![NPM](https://nodei.co/npm/@trendmicro/react-component.png?downloads=true&stars=true)](https://nodei.co/npm/@trendmicro/react-component/)
 
-- Empty React component
-- Example
-- ESLint (.eslintrc)
-- Babel (.babelrc)
-- .gitignore and .npmignore
-- Tests and Coverage
-- Travis CI (.travis.yml)
+React Component
+
+Demo: https://trendmicro-frontend.github.io/react-component
+
+## Installation
+
+1. Install the latest version of [react](https://github.com/facebook/react) and [react-component](https://github.com/trendmicro-frontend/react-component):
+
+  ```
+  npm install --save react @trendmicro/react-component
+  ```
+
+2. At this point you can import `@trendmicro/react-buttons` and its styles in your application as follows:
+
+  ```js
+  import Component from '@trendmicro/react-component';
+
+  // Be sure to include styles at some point, probably during your bootstraping
+  import '@trendmicro/react-buttons/dist/react-buttons.css';
+  ```
 
 ## Usage
 
-1. Clone the repository with a different name:
-  ```sh
-  git clone git@github.com:trendmicro-frontend/react-component-template.git react-example
-  ```
+```js
+<Component
+    className="component"
+>
+    GitHub
+</Component>
+```
 
-2. Remove .git from the newly directory and rename all the occurrences of "react-component-template" into your project name:
-  ```sh
-  cd react-example; rm -rf ./.git
-  sed -i '' 's/react-component-template/react-example/g' *.* examples/*
-  ```
+
+## API
+
+### Properties
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Name</th>
+      <th style="width: 50px;">Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## License
 
