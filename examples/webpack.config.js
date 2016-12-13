@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var nib = require('nib');
 
 module.exports = {
     debug: true,
@@ -17,10 +16,6 @@ module.exports = {
                 test: /\.jsx?$/,
                 loaders: ['eslint'],
                 exclude: /node_modules/
-            },
-            {
-                test: /\.styl$/,
-                loader: 'stylint'
             }
         ],
         loaders: [
@@ -32,26 +27,8 @@ module.exports = {
                 test: /\.jsx?$/,
                 loader: 'babel',
                 exclude: /(node_modules|bower_components)/
-            },
-            {
-                test: /\.styl$/,
-                loaders: [
-                    'style',
-                    'css?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]',
-                    'stylus'
-                ]
-            },
-            {
-                test: /\.css$/,
-                loader: 'style!css?-autoprefixer'
             }
         ]
-    },
-    stylus: {
-        // nib - CSS3 extensions for Stylus
-        use: [nib()],
-        // no need to have a '@import "nib"' in the stylesheet
-        import: ['~nib/lib/nib/index.styl']
     },
     plugins: [
     ],
