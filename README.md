@@ -14,13 +14,13 @@ Demo: https://trendmicro-frontend.github.io/react-component
   npm install --save react @trendmicro/react-component
   ```
 
-2. At this point you can import `@trendmicro/react-buttons` and its styles in your application as follows:
+2. At this point you can import `@trendmicro/react-component` and its styles in your application as follows:
 
   ```js
   import Component from '@trendmicro/react-component';
 
   // Be sure to include styles at some point, probably during your bootstraping
-  import '@trendmicro/react-buttons/dist/react-buttons.css';
+  import '@trendmicro/react-component/dist/react-component.css';
   ```
 
 ## Usage
