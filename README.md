@@ -35,13 +35,13 @@ Demo: https://trendmicro-frontend.github.io/react-component
 
 ### Properties
 
-<table class="table table-bordered table-striped">
+<table>
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 50px;">Type</th>
-      <th>Default</th>
-      <th>Description</th>
+      <th align="left">Name</th>
+      <th align="left">Type</th>
+      <th align="left">Default</th>
+      <th align="left">Description</th>
     </tr>
   </thead>
   <tbody>
