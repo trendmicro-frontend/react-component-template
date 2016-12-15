@@ -19,17 +19,17 @@
     "lint:fix": "eslint --fix ./src",
     "test": "./babel-tap --coverage test/*.js",
     "coveralls": "./babel-tap --coverage --coverage-report=text-lcov test/*.js | node_modules/.bin/coveralls",
-    "webpack-dev-server": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000"
+    "dev": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-component.git"
   },
-  "author": "Author Name <author_name@trend.com.tw>",
+  "author": "",
   "contributors": [
     {
-      "name": "Author Name",
-      "email": "author_name@trend.com.tw",
+      "name": "",
+      "email": "",
       "url": "https://github.com/trendmicro-frontend"
     }
   ],
