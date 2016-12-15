@@ -35,6 +35,8 @@
   rm -rf ./.git
   sed -i '' 's/react-component/react-example/g' *.* examples/*
   sed -i '' 's/React Component/React Example/g' *.* examples/*
+  sed -i '' 's/Component/Example/g' README.md src/index.js
+  mv src/Component.jsx src/Example.jsx
   ```
 
 ## License
