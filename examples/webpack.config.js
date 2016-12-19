@@ -8,7 +8,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'index.jsx'),
     output: {
         path: path.join(__dirname, '../docs'),
-        filename: 'bundle.js'
+        filename: 'bundle.js?[hash]'
     },
     module: {
         preLoaders: [
