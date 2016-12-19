@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     debug: true,
@@ -31,6 +32,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: '../docs/index.html',
+            template: 'index.html'
+        })
     ],
     resolve: {
         extensions: ['', '.js', '.jsx']
