@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import styles from './index.styl';
 
 export default class extends Component {
     static propTypes = {
@@ -18,7 +17,7 @@ export default class extends Component {
     }
     render() {
         return (
-            <div className={styles.componentTitle}>Hello</div>
+            <div>Hello</div>
         );
     }
 }
