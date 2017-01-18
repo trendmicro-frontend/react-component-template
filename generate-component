@@ -58,6 +58,6 @@ inquirer.prompt(questions).then(function (answers) {
             .replace('${componentName}', componentName));
         run('mv src/Component.jsx src/${componentName}.jsx'
             .replace('${componentName}', componentName));
-        run('rm -rf index.js .git');
+        run('rm -rf index.js .git node_modules');
     });
 });
