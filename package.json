@@ -1,0 +1,22 @@
+{
+  "name": "react-component-template",
+  "version": "1.0.0",
+  "description": "React Component Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendmicro-frontend/react-component-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trendmicro-frontend/react-component-template/issues"
+  },
+  "homepage": "https://github.com/trendmicro-frontend/react-component-template#readme",
+  "dependencies": {
+    "inquirer": "^2.0.0"
+  }
+}
