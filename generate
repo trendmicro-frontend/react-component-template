@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+
+var inquirer = require('inquirer');
+var spawnSync = require('child_process').spawnSync;
+
+var run = function (cmd, options) {
+    options = options || {};
+    options.stdio = 'inherit';
+    options.shell = true;
+    spawnSync(cmd, options);
+};
+
+var questions = [
+    {
+        type: 'input',
+        name: 'packageName',
+        message: 'What\'s your package name?',
+        default: 'react-component'
+    },
+    {
+        type: 'input',
+        name: 'componentName',
+        message: 'What\'s your component name?',
+        default: 'Component'
+    },
+    {
+        type: 'list',
+        name: 'branch',
+        message: 'Specify which branch you want to use?',
+        choices: ['babel', 'webpack']
+    }
+];
+
+inquirer.prompt(questions).then(function (answers) {
+    console.log(JSON.stringify(answers, null, 4));
+
+    inquirer.prompt({
+        type: 'confirm',
+        name: 'answer',
+        message: 'Are you sure you want to proceed?',
+        default: true
+    }).then(function (r) {
+        if (!r.answer) {
+            return;
+        }
+
+        var packageName = answers.packageName;
+        var componentName = answers.componentName;
+        var branch = answers.branch;
+
+        run('git checkout ${branch}'
+            .replace('${branch}', branch));
+        run('sed -i \'\' \'s/react-component/${packageName}/g\' *.* examples/*'
+            .replace('${packageName}', packageName));
+        run('sed -i \'\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
+            .replace('${componentName}', componentName));
+        run('sed -i \'\' \'s/Component/${componentName}/g\' README.md src/index.js'
+            .replace('${componentName}', componentName));
+        run('mv src/Component.jsx src/${componentName}.jsx'
+            .replace('${componentName}', componentName));
+        run('rm -rf index.js .git');
+    });
+});
