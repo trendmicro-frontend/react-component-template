@@ -6,8 +6,19 @@ var spawnSync = require('child_process').spawnSync;
 var run = function (cmd, options) {
     options = options || {};
     options.stdio = 'inherit';
-    options.shell = true;
-    spawnSync(cmd, options);
+
+    // Mac
+    if (process.platform === 'darwin') {
+        return spawnSync(process.env.SHELL || '/bin/bash', ['-l', '-c'].concat(cmd), options);
+    }
+
+    // Windows
+    if (process.platform === 'win32') {
+        return spawnSync(process.env.SHELL || process.env.COMSPEC || 'cmd.exe', ['/c'].concat(cmd), options);
+    }
+    
+    // Linux
+    return spawnSync(process.env.SHELL || '/bin/sh', ['-l', '-c'].concat(cmd), options);
 };
 
 var questions = [
@@ -50,11 +61,11 @@ inquirer.prompt(questions).then(function (answers) {
 
         run('git checkout ${branch}'
             .replace('${branch}', branch));
-        run('sed -i \'\' \'s/react-component/${packageName}/g\' *.* examples/*'
+        run('sed -i\'\' \'s/react-component/${packageName}/g\' *.* examples/*'
             .replace('${packageName}', packageName));
-        run('sed -i \'\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
+        run('sed -i\'\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
             .replace('${componentName}', componentName));
-        run('sed -i \'\' \'s/Component/${componentName}/g\' README.md src/index.js'
+        run('sed -i\'\' \'s/Component/${componentName}/g\' README.md src/index.js'
             .replace('${componentName}', componentName));
         run('mv src/Component.jsx src/${componentName}.jsx'
             .replace('${componentName}', componentName));
