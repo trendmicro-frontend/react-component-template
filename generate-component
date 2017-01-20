@@ -61,14 +61,14 @@ inquirer.prompt(questions).then(function (answers) {
 
         run('git checkout ${branch}'
             .replace('${branch}', branch));
-        run('sed -i\'\' \'s/react-component/${packageName}/g\' *.* examples/*'
+        run('sed -i\'.bak\' \'s/react-component/${packageName}/g\' *.* examples/*'
             .replace('${packageName}', packageName));
-        run('sed -i\'\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
+        run('sed -i\'.bak\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
             .replace('${componentName}', componentName));
-        run('sed -i\'\' \'s/Component/${componentName}/g\' README.md src/index.js'
+        run('sed -i\'.bak\' \'s/Component/${componentName}/g\' README.md src/index.js'
             .replace('${componentName}', componentName));
         run('mv src/Component.jsx src/${componentName}.jsx'
             .replace('${componentName}', componentName));
-        run('rm -rf index.js .git node_modules');
+        run('rm -rf *.bak src/*.bak examples/*.bak index.js .git node_modules');
     });
 });
