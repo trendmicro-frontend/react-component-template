@@ -24,52 +24,53 @@ module.exports = {
         .concat(Object.keys(pkg.peerDependencies))
         .concat(Object.keys(pkg.dependencies)),
     module: {
-        preLoaders: [
+        rules: [
             // http://survivejs.com/webpack_react/linting_in_webpack/
             {
                 test: /\.jsx?$/,
-                loaders: ['eslint'],
+                loader: 'eslint-loader',
+                enforce: 'pre',
                 exclude: /node_modules/
             },
             {
                 test: /\.styl$/,
-                loader: 'stylint'
-            }
-        ],
-        loaders: [
-            {
-                test: /\.json$/,
-                loader: 'json'
+                loader: 'stylint-loader',
+                enforce: 'pre'
             },
             {
                 test: /\.jsx?$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/
             },
             {
                 test: /\.styl$/,
-                loader: ExtractTextPlugin.extract(
-                    'style',
-                    'css?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus'
-                )
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: 'css-loader?camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus-loader'
+                })
             },
             {
                 test: /\.css$/,
-                loader: 'style!css?-autoprefixer'
+                loader: 'style-loader!css-loader'
             }
         ]
     },
-    stylus: {
-        // nib - CSS3 extensions for Stylus
-        use: [nib()],
-        // no need to have a '@import "nib"' in the stylesheet
-        import: ['~nib/lib/nib/index.styl']
-    },
     plugins: [
+        new webpack.LoaderOptionsPlugin({
+            test: /\.styl$/, // may apply this only for some modules
+            options: {
+                stylus: {
+                    // nib - CSS3 extensions for Stylus
+                    use: [nib()],
+                    // no need to have a '@import "nib"' in the stylesheet
+                    import: ['~nib/lib/nib/index.styl']
+                }
+            }
+        }),
         new ExtractTextPlugin('../dist/' + publicname + '.css'),
         new webpack.BannerPlugin(banner)
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['.js', '.jsx']
     }
 };
