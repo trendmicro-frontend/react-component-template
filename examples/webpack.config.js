@@ -62,7 +62,7 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.json', '.jsx']
     },
     // https://webpack.github.io/docs/webpack-dev-server.html#additional-configuration-options
     devServer: {

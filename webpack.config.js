@@ -69,6 +69,6 @@ module.exports = {
         new webpack.BannerPlugin(banner)
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.json', '.jsx']
     }
 };
