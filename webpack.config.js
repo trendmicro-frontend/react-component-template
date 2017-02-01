@@ -2,6 +2,7 @@ var pkg = require('./package.json');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var stylusLoader = require('stylus-loader');
 var nib = require('nib');
 var publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
 var banner = [
@@ -56,15 +57,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.LoaderOptionsPlugin({
-            test: /\.styl$/, // may apply this only for some modules
-            options: {
-                stylus: {
-                    // nib - CSS3 extensions for Stylus
-                    use: [nib()],
-                    // no need to have a '@import "nib"' in the stylesheet
-                    import: ['~nib/lib/nib/index.styl']
-                }
+        new stylusLoader.OptionsPlugin({
+            default: {
+                // nib - CSS3 extensions for Stylus
+                use: [nib()],
+                // no need to have a '@import "nib"' in the stylesheet
+                import: ['~nib/lib/nib/index.styl']
             }
         }),
         new ExtractTextPlugin('../dist/' + publicname + '.css'),
