@@ -29,30 +29,30 @@ module.exports = {
             // http://survivejs.com/webpack_react/linting_in_webpack/
             {
                 test: /\.jsx?$/,
-                loader: 'eslint-loader',
+                use: 'eslint-loader',
                 enforce: 'pre',
                 exclude: /node_modules/
             },
             {
                 test: /\.styl$/,
-                loader: 'stylint-loader',
+                use: 'stylint-loader',
                 enforce: 'pre'
             },
             {
                 test: /\.jsx?$/,
-                loader: 'babel-loader',
+                use: 'babel-loader',
                 exclude: /(node_modules|bower_components)/
             },
             {
                 test: /\.styl$/,
-                loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style-loader',
-                    loader: 'css-loader?camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus-loader'
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader?camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus-loader'
                 })
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: 'style-loader!css-loader'
             }
         ]
     },

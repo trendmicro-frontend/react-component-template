@@ -16,23 +16,23 @@ module.exports = {
             // http://survivejs.com/webpack_react/linting_in_webpack/
             {
                 test: /\.jsx?$/,
-                loaders: 'eslint-loader',
+                use: 'eslint-loader',
                 enforce: 'pre',
                 exclude: /node_modules/
             },
             {
                 test: /\.styl$/,
-                loader: 'stylint-loader',
+                use: 'stylint-loader',
                 enforce: 'pre'
             },
             {
                 test: /\.jsx?$/,
-                loader: 'babel-loader',
+                use: 'babel-loader',
                 exclude: /(node_modules|bower_components)/
             },
             {
                 test: /\.styl$/,
-                loaders: [
+                use: [
                     'style-loader',
                     'css-loader?camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]',
                     'stylus-loader'
@@ -40,7 +40,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: 'style-loader!css-loader'
             }
         ]
     },
