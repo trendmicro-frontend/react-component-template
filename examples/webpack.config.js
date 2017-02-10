@@ -14,25 +14,25 @@ module.exports = {
             // http://survivejs.com/webpack_react/linting_in_webpack/
             {
                 test: /\.jsx?$/,
-                use: 'eslint-loader',
+                loader: 'eslint-loader',
                 enforce: 'pre',
                 exclude: /node_modules/
             },
             {
                 test: /\.styl$/,
-                use: 'stylint-loader',
+                loader: 'stylint-loader',
                 enforce: 'pre'
             },
             {
                 test: /\.jsx?$/,
-                use: 'babel-loader',
+                loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/
             }
         ]
     },
     plugins: [
         new webpack.LoaderOptionsPlugin({
-            debug: true,
+            debug: true
         }),
         new HtmlWebpackPlugin({
             filename: '../docs/index.html',
