@@ -34,7 +34,7 @@ module.exports = {
                 test: /\.styl$/,
                 use: [
                     'style-loader',
-                    'css-loader?camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]',
+                    'css-loader?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]',
                     'stylus-loader'
                 ]
             },
@@ -48,6 +48,8 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             debug: true,
         }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new stylusLoader.OptionsPlugin({
             default: {
                 // nib - CSS3 extensions for Stylus
