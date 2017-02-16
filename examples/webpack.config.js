@@ -34,6 +34,8 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             debug: true
         }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({
             filename: '../docs/index.html',
             template: 'index.html'
