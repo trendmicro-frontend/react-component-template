@@ -50,6 +50,7 @@
     "react-addons-shallow-compare": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
+    "@trendmicro/react-buttons": "~0.5.0",
     "babel-cli": "~6.22.2",
     "babel-core": "~6.22.1",
     "babel-eslint": "~7.1.1",
@@ -69,6 +70,7 @@
     "eslint-plugin-jsx-a11y": "~2.2.3",
     "eslint-plugin-react": "~6.9.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "~0.10.0",
     "html-webpack-plugin": "~2.28.0",
     "http-server": "~0.9.0",
     "nib": "~1.1.2",
@@ -79,6 +81,8 @@
     "stylint-loader": "~1.0.0",
     "stylus-loader": "~2.4.0",
     "tap": "~10.0.0",
+    "trendmicro-ui": "~0.2.0",
+    "url-loader": "~0.5.7",
     "webpack": "~2.2.1",
     "webpack-dev-server": "~1.16.2"
   }

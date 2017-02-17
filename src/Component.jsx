@@ -18,7 +18,7 @@ export default class extends Component {
     }
     render() {
         return (
-            <div className={styles.componentTitle}>Hello</div>
+            <div {...this.props} className={styles.componentTitle} />
         );
     }
 }
