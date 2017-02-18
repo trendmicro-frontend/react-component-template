@@ -38,30 +38,8 @@ Demo: https://trendmicro-frontend.github.io/react-component
 
 ### Properties
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">Name</th>
-      <th align="left">Type</th>
-      <th align="left">Default</th>
-      <th align="left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
 
 ## License
 
