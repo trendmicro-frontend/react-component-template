@@ -2,7 +2,7 @@ import 'trendmicro-ui/dist/css/trendmicro-ui.css';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Nav from './Nav';
+import Navbar from './Navbar';
 import Section from './Section';
 import Component from '../src';
 //import styles from './index.styl';
@@ -14,7 +14,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <Nav name={name} url={url} />
+                <Navbar name={name} url={url} />
                 <div className="container-fluid" style={{ padding: '20px 20px 0' }}>
                     <div className="row">
                         <div className="col-md-12">
