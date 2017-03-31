@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Button } from '@trendmicro/react-buttons';
-import styles from './Nav.styl';
+import styles from './Navbar.styl';
 
 export default class extends Component {
     static propTypes = {
