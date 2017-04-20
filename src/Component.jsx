@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 import styles from './index.styl';
 
-export default class extends Component {
+class Component extends PureComponent {
     static propTypes = {
     };
     static defaultProps = {
@@ -13,12 +12,11 @@ export default class extends Component {
     actions = {
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         return (
             <div {...this.props} className={styles.componentTitle} />
         );
     }
 }
+
+export default Component;
