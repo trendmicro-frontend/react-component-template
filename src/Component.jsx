@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 
 class Component extends PureComponent {
     static propTypes = {
