@@ -10,12 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-component-template.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Cheton Wu <cheton_wu@trend.com.tw>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/trendmicro-frontend/react-component-template/issues"
   },
   "homepage": "https://github.com/trendmicro-frontend/react-component-template#readme",
+  "keywords": [
+      "react",
+      "component",
+      "template"
+  ],
   "dependencies": {
     "inquirer": "^2.0.0"
   }
