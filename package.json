@@ -1,6 +1,6 @@
 {
   "name": "react-component-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React Component Template",
   "main": "index.js",
   "scripts": {
