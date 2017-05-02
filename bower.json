@@ -1,0 +1,19 @@
+{
+  "name": "react-component-template",
+  "description": "React Component Template",
+  "authors": [
+    {
+      "name": "Cheton Wu",
+      "email": "cheton_wu@trend.com.tw",
+      "homepage": "https://github.com/cheton"
+    }
+  ],
+  "homepage": "https://github.com/trendmicro-frontend/react-component-template",
+  "snapshots": [],
+  "keywords": [
+    "react",
+    "component",
+    "template"
+  ],
+  "license": "MIT"
+}
