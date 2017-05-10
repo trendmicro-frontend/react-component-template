@@ -39,6 +39,16 @@ var questions = [
         name: 'branch',
         message: 'Specify which branch you want to use?',
         choices: ['babel', 'webpack']
+    },
+    {
+        type: 'input',
+        name: 'name',
+        message: 'Input your name'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Input your email address'
     }
 ];
 
@@ -58,14 +68,22 @@ inquirer.prompt(questions).then(function (answers) {
         var packageName = answers.packageName;
         var componentName = answers.componentName;
         var branch = answers.branch;
+        var name = answers.name;
+        var email = answers.email;
 
         run('git checkout ${branch}'
             .replace('${branch}', branch));
+        run('sed -i\'.bak\' \'s/"author": ""/"author": ${author}/g\' package.json'
+            .replace('${author}', JSON.stringify(name + ' <' + email + '>'));
+        run('sed -i\'.bak\' \'s/"name": ""/"name": ${name}/g\' package.json'
+            .replace('${name}', JSON.stringify(name));
+        run('sed -i\'.bak\' \'s/"email": ""/"email": ${email}/g\' package.json'
+            .replace('${email}', JSON.stringify(email));
         run('sed -i\'.bak\' \'s/react-component/${packageName}/g\' *.* examples/*'
             .replace('${packageName}', packageName));
         run('sed -i\'.bak\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
             .replace('${componentName}', componentName));
-        run('sed -i\'.bak\' \'s/ Component/ ${componentName}/g\' README.md src/index.js'
+        run('sed -i\'.bak\' \'s/ Component/ ${componentName}/g\' README.md src/*.js'
             .replace('${componentName}', componentName));
         run('mv src/Component.jsx src/${componentName}.jsx'
             .replace('${componentName}', componentName));
