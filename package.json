@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/trendmicro-frontend/react-component-template#readme",
   "keywords": [
-      "react",
-      "component",
-      "template"
+    "react",
+    "component",
+    "template"
   ],
   "dependencies": {
     "inquirer": "^2.0.0"
