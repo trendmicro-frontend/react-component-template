@@ -71,6 +71,7 @@ inquirer.prompt(questions).then(function (answers) {
         var name = answers.name;
         var email = answers.email;
 
+        run('rm -f package-lock.json');
         run('git checkout ${branch}'
             .replace('${branch}', branch));
         run('sed -i\'.bak\' \'s/"author": ""/"author": ${author}/g\' package.json'
