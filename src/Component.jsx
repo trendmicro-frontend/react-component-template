@@ -14,7 +14,7 @@ class Component extends PureComponent {
 
     render() {
         return (
-            <div {...this.props} className={styles.componentTitle} />
+            <div {...this.props} className={styles.component} />
         );
     }
 }
