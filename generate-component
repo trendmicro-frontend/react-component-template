@@ -84,7 +84,7 @@ inquirer.prompt(questions).then(function (answers) {
             .replace('${packageName}', packageName));
         run('sed -i\'.bak\' \'s/React Component/React ${componentName}/g\' *.* examples/*'
             .replace('${componentName}', componentName));
-        run('sed -i\'.bak\' \'s/ Component/ ${componentName}/g\' README.md src/*.js'
+        run('sed -i\'.bak\' \'s/Component/ ${componentName}/g\' README.md src/*.js'
             .replace('${componentName}', componentName));
         run('mv src/Component.jsx src/${componentName}.jsx'
             .replace('${componentName}', componentName));
