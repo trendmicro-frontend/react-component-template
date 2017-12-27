@@ -14,6 +14,16 @@ export default class extends Component {
         collapseIn: false
     };
 
+    toggleNavbar = () => {
+        this.setState(state => ({
+            collapseIn: !state.collapseIn
+        }));
+    };
+
+    navigateTo = (url) => (event) => {
+        window.location = url;
+    };
+
     render() {
         const { name, url } = this.props;
 
@@ -27,9 +37,7 @@ export default class extends Component {
                         <button
                             type="button"
                             className={classNames(styles.navbarToggle, styles.collapsed)}
-                            onClick={() => {
-                                this.setState({ collapseIn: !this.state.collapseIn });
-                            }}
+                            onClick={this.toggleNavbar}
                         >
                             <span className={styles.srOnly}>Toggle navigation</span>
                             <span className={styles.iconBar} />
@@ -48,9 +56,7 @@ export default class extends Component {
                         <Button
                             className={classNames(styles.navbarBtn, styles.navbarRight)}
                             btnStyle="flat"
-                            onClick={() => {
-                                window.location = url;
-                            }}
+                            onClick={this.navigateTo(url)}
                         >
                             <i className="fa fa-github" />
                             GitHub
