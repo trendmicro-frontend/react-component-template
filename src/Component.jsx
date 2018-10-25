@@ -3,17 +3,13 @@ import React, { PureComponent } from 'react';
 class Component extends PureComponent {
     static propTypes = {
     };
-    static defaultProps = {
-    };
 
-    state = {
-    };
-    actions = {
+    static defaultProps = {
     };
 
     render() {
         return (
-            <div>Hello</div>
+            <div {...this.props} />
         );
     }
 }
