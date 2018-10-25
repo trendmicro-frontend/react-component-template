@@ -4,12 +4,8 @@ import styles from './index.styl';
 class Component extends PureComponent {
     static propTypes = {
     };
-    static defaultProps = {
-    };
 
-    state = {
-    };
-    actions = {
+    static defaultProps = {
     };
 
     render() {
