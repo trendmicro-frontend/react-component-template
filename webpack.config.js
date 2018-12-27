@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nib = require('nib');
 const webpack = require('webpack');
 const pkg = require('./package.json');
+const babelConfig = require('./babel.config');
 
 const publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
 const banner = [
@@ -41,7 +42,8 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options: babelConfig
             },
             {
                 test: /\.styl$/,
