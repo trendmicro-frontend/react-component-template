@@ -49,7 +49,15 @@ module.exports = {
                 test: /\.styl$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader?camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: `${localClassPrefix}---[local]---[hash:base64:5]`,
+                            camelCase: true,
+                            importLoaders: 1
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
