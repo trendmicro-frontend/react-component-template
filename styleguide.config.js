@@ -1,5 +1,4 @@
 const path = require('path');
-const stylusLoader = require('stylus-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const pkg = require('./package.json');
