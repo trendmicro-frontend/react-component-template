@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-component-template.git"
   },
-  "author": "Cheton Wu <cheton_wu@trend.com.tw>",
+  "author": "Cheton Wu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trendmicro-frontend/react-component-template/issues"
